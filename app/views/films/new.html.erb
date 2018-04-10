@@ -1,0 +1,23 @@
+<%=  form_tag(films_path) do %>
+    <div class="film-field">
+        <%= label_tag("Title: ") %> <br/>
+        <%= text_field_tag("title", @film.title) %>
+    </div>
+
+    <div class="film-field">
+        <%= label_tag("Genre: ") %> <br/>
+        <%= text_field_tag("genre", @film.genre) %>
+    </div>
+
+    <div class="film-field">
+        <%= label_tag("Year: ") %> <br/>
+        <%= text_field_tag("year", @film.year) %>
+    </div>
+
+    <div class="film-field">
+        <%= label_tag("Review: ") %> <br/>
+        <%= text_field_tag("review", @film.review) %>
+    </div>
+
+    <%= button_tag("Add Film!") %>
+<% end %>

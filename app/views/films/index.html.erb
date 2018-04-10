@@ -1,0 +1,12 @@
+
+<%= link_to("Add a new Film", films_new_path) %>
+
+<ul class="films">
+	<% @films.each do |film| %>
+		<li class="film">
+		<%= render partial: "film", locals: { film: film} %>
+		<%= link_to("Edit Film", films_edit_path(film)) %>
+		<%= link_to("Delete Film", films_path(film), method: :delete, :data => { :confirm  => "Are you sure you want to delete this film?"}) %>
+		</li>
+	<% end %>
+</ul>
